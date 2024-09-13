@@ -6,9 +6,21 @@
 //
 
 import UIKit
+import Swinject
 
 class ViewController: UIViewController {
 
+    let container: Container = {
+        let container = Container()
+        container.register(ColorProvidable.self) { _ in
+            ColorProvider()
+        }
+        container.register(ColorViewController.self) { resolver in
+            ColorViewController(provider: resolver.resolve(ColorProvidable.self))
+        }
+        return container
+    }()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,9 +47,9 @@ class ViewController: UIViewController {
     }
     
     private func handleButton() {
-        present(
-            ColorViewController(provider: ColorProvider()),
-            animated: true
-        )
+//        let viewController = ColorViewController(provider: ColorProvider())
+        guard let viewController = container.resolve(ColorViewController.self) else { return }
+        
+        present(viewController, animated: true)
     }
 }
