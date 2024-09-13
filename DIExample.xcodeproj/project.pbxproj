@@ -56,10 +56,18 @@
 			);
 			target = 34B758742C9420D1002C1B9A /* DIExample */;
 		};
+		34B758B02C94710C002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ColorProvider.swift,
+			);
+			target = 34B758742C9420D1002C1B9A /* DIExample */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		34B758A82C94225A002C1B9A /* Normal */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (34B758A92C942262002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Normal; sourceTree = "<group>"; };
+		34B758A82C94225A002C1B9A /* ViewController */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (34B758A92C942262002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewController; sourceTree = "<group>"; };
+		34B758AD2C947100002C1B9A /* ColorProvider */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (34B758B02C94710C002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ColorProvider; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +120,8 @@
 			children = (
 				34B758782C9420D1002C1B9A /* AppDelegate.swift */,
 				34B7587A2C9420D1002C1B9A /* SceneDelegate.swift */,
-				34B758A82C94225A002C1B9A /* Normal */,
+				34B758AD2C947100002C1B9A /* ColorProvider */,
+				34B758A82C94225A002C1B9A /* ViewController */,
 				34B758812C9420D2002C1B9A /* Assets.xcassets */,
 				34B758832C9420D2002C1B9A /* LaunchScreen.storyboard */,
 				34B758862C9420D2002C1B9A /* Info.plist */,

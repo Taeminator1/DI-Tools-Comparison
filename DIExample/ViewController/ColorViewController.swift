@@ -9,9 +9,20 @@ import UIKit
 
 class ColorViewController: UIViewController {
     
+    private let provider: ColorProvidable?
+    
+    init(provider: ColorProvidable?) {
+        self.provider = provider
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
+        view.backgroundColor = provider?.color
         
         let button = UIButton(frame: view.frame)
         button.center = view.center
