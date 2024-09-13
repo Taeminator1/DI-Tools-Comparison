@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import NeedleFoundation
 
-protocol ColorProvidable {
+protocol ColorProvidable: Dependency {
     var color: UIColor { get }
 }
 

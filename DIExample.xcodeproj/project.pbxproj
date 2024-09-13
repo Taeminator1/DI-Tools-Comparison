@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		34283D802C9477EE005E42EC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 34283D7F2C9477EE005E42EC /* Swinject */; };
+		3436907D2C947ADD009A0DA5 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 3436907C2C947ADD009A0DA5 /* NeedleFoundation */; };
+		343690842C947DFC009A0DA5 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343690832C947DFC009A0DA5 /* NeedleGenerated.swift */; };
 		34B758792C9420D1002C1B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B758782C9420D1002C1B9A /* AppDelegate.swift */; };
 		34B7587B2C9420D1002C1B9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B7587A2C9420D1002C1B9A /* SceneDelegate.swift */; };
 		34B758822C9420D2002C1B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B758812C9420D2002C1B9A /* Assets.xcassets */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		343690832C947DFC009A0DA5 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		34B758752C9420D1002C1B9A /* DIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B758782C9420D1002C1B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B7587A2C9420D1002C1B9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		343690802C947AF8009A0DA5 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ColorComponent.swift,
+				RootComponent.swift,
+			);
+			target = 34B758742C9420D1002C1B9A /* DIExample */;
+		};
 		34B758A92C942262002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -67,6 +78,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		34283D812C947A84005E42EC /* Component */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (343690802C947AF8009A0DA5 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Component; sourceTree = "<group>"; };
 		34B758A82C94225A002C1B9A /* ViewController */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (34B758A92C942262002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewController; sourceTree = "<group>"; };
 		34B758AD2C947100002C1B9A /* ColorProvider */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (34B758B02C94710C002C1B9A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ColorProvider; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3436907D2C947ADD009A0DA5 /* NeedleFoundation in Frameworks */,
 				34283D802C9477EE005E42EC /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +133,9 @@
 		34B758772C9420D1002C1B9A /* DIExample */ = {
 			isa = PBXGroup;
 			children = (
+				34283D812C947A84005E42EC /* Component */,
 				34B758782C9420D1002C1B9A /* AppDelegate.swift */,
+				343690832C947DFC009A0DA5 /* NeedleGenerated.swift */,
 				34B7587A2C9420D1002C1B9A /* SceneDelegate.swift */,
 				34B758AD2C947100002C1B9A /* ColorProvider */,
 				34B758A82C94225A002C1B9A /* ViewController */,
@@ -166,6 +181,7 @@
 			name = DIExample;
 			packageProductDependencies = (
 				34283D7F2C9477EE005E42EC /* Swinject */,
+				3436907C2C947ADD009A0DA5 /* NeedleFoundation */,
 			);
 			productName = DIExample;
 			productReference = 34B758752C9420D1002C1B9A /* DIExample.app */;
@@ -241,6 +257,7 @@
 			mainGroup = 34B7586C2C9420D1002C1B9A;
 			packageReferences = (
 				34283D7E2C9477EE005E42EC /* XCRemoteSwiftPackageReference "Swinject" */,
+				34283D822C947AA4005E42EC /* XCRemoteSwiftPackageReference "needle" */,
 			);
 			productRefGroup = 34B758762C9420D1002C1B9A /* Products */;
 			projectDirPath = "";
@@ -284,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343690842C947DFC009A0DA5 /* NeedleGenerated.swift in Sources */,
 				34B758792C9420D1002C1B9A /* AppDelegate.swift in Sources */,
 				34B7587B2C9420D1002C1B9A /* SceneDelegate.swift in Sources */,
 			);
@@ -628,6 +646,14 @@
 				minimumVersion = 2.9.1;
 			};
 		};
+		34283D822C947AA4005E42EC /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -635,6 +661,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 34283D7E2C9477EE005E42EC /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		3436907C2C947ADD009A0DA5 /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34283D822C947AA4005E42EC /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
