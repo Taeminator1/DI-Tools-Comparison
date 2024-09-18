@@ -10,6 +10,7 @@
 		34283D802C9477EE005E42EC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 34283D7F2C9477EE005E42EC /* Swinject */; };
 		3436907D2C947ADD009A0DA5 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 3436907C2C947ADD009A0DA5 /* NeedleFoundation */; };
 		343690842C947DFC009A0DA5 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343690832C947DFC009A0DA5 /* NeedleGenerated.swift */; };
+		343690912C99ACA4009A0DA5 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 343690902C99ACA4009A0DA5 /* Dependencies */; };
 		34B758792C9420D1002C1B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B758782C9420D1002C1B9A /* AppDelegate.swift */; };
 		34B7587B2C9420D1002C1B9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B7587A2C9420D1002C1B9A /* SceneDelegate.swift */; };
 		34B758822C9420D2002C1B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B758812C9420D2002C1B9A /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343690912C99ACA4009A0DA5 /* Dependencies in Frameworks */,
 				3436907D2C947ADD009A0DA5 /* NeedleFoundation in Frameworks */,
 				34283D802C9477EE005E42EC /* Swinject in Frameworks */,
 			);
@@ -182,6 +184,7 @@
 			packageProductDependencies = (
 				34283D7F2C9477EE005E42EC /* Swinject */,
 				3436907C2C947ADD009A0DA5 /* NeedleFoundation */,
+				343690902C99ACA4009A0DA5 /* Dependencies */,
 			);
 			productName = DIExample;
 			productReference = 34B758752C9420D1002C1B9A /* DIExample.app */;
@@ -258,6 +261,7 @@
 			packageReferences = (
 				34283D7E2C9477EE005E42EC /* XCRemoteSwiftPackageReference "Swinject" */,
 				34283D822C947AA4005E42EC /* XCRemoteSwiftPackageReference "needle" */,
+				3436908F2C99ACA4009A0DA5 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 			);
 			productRefGroup = 34B758762C9420D1002C1B9A /* Products */;
 			projectDirPath = "";
@@ -654,6 +658,14 @@
 				kind = branch;
 			};
 		};
+		3436908F2C99ACA4009A0DA5 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -666,6 +678,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 34283D822C947AA4005E42EC /* XCRemoteSwiftPackageReference "needle" */;
 			productName = NeedleFoundation;
+		};
+		343690902C99ACA4009A0DA5 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3436908F2C99ACA4009A0DA5 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

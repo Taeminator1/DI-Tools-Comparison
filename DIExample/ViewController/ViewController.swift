@@ -7,6 +7,7 @@
 
 import UIKit
 import Swinject
+import Dependencies
 
 class ViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
 //    }()
     
     let colorComponent: ColorComponent
+    
+    @Dependency(\.colorProvider) var colorProvider
     
     init(colorComponent: ColorComponent) {
         self.colorComponent = colorComponent
@@ -52,7 +55,8 @@ class ViewController: UIViewController {
     private func handleButton() {
 //        let viewController = ColorViewController(provider: ColorProvider())
 //        guard let viewController = container.resolve(ColorViewController.self) else { return }
-        let viewController = colorComponent.colorViewController
+//        let viewController = colorComponent.colorViewController
+        let viewController = ColorViewController(provider: colorProvider)
         
         present(viewController, animated: true)
     }

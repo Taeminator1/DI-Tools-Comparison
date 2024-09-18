@@ -7,8 +7,9 @@
 
 import UIKit
 import NeedleFoundation
+import Dependencies
 
-protocol ColorProvidable: Dependency {
+protocol ColorProvidable: NeedleFoundation.Dependency {
     var color: UIColor { get }
 }
 
@@ -16,5 +17,16 @@ class ColorProvider: ColorProvidable {
     var color: UIColor {
         [.systemRed, .systemGreen, .systemBlue]
             .randomElement()!
+    }
+}
+
+extension ColorProvider: Dependencies.DependencyKey {
+    static var liveValue: ColorProvidable = ColorProvider()
+}
+
+extension DependencyValues {
+    var colorProvider: ColorProvidable {
+        get { self[ColorProvider.self] }
+        set { self[ColorProvider.self] = newValue }
     }
 }
